@@ -1,0 +1,49 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction,force:hasSObjectName" 
+                access="global" controller="CustomLightningActionApxCtrl"
+                extends="c:genericUtilities">
+    <aura:attribute name="buttonLabel" type="String"/> 
+    
+    <aura:attribute name="showConfirmMsgModal" type="String"/>
+    <aura:attribute name="confirmMsg" type="String"/>
+    <aura:attribute name="showConfirmApexMethodName" type="String"/>
+    
+    <aura:attribute name="callApexOrLaunchComponent" type="String" default="Component"/>  
+    
+    <aura:attribute name="apexMethodName" type="String"/>
+    <aura:attribute name="componentName" type="String"/>
+    <aura:attribute name="eventName" type="String"/>
+    
+    <aura:attribute name="recordIdAttribute" type="String" default="recordId"/>
+    <aura:attribute name="componentLoadType" type="String" default="Redirect"/>
+    
+    
+    <lightning:overlayLibrary aura:id="confirmMsgOverlay"/>    
+    <lightning:overlayLibrary aura:id="modalOverlay"/>
+    <div style="background-color: white; border-radius: 5px;" class="slds-align_absolute-center">
+        <div style="margin: 20px"><!-- iconName & iconPosition-->
+            <lightning:button variant="brand" name="modal" 
+                              label="{!v.buttonLabel}"
+                              onclick="{!c.handleModalButtonClick}"/>
+        </div>
+        <div class="slds-backdrop " aura:id="backDrop"></div>
+        <div role="dialog" tabindex="-1" aura:id="confirmMsgModal" aria-labelledby="header43" class="slds-modal ">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <lightning:buttonIcon iconName="utility:close" variant="bare" 
+                                          alternativeText="Close"
+                                          class="slds-modal__close"
+                                          size="large"
+                                          onclick="{!c.hideConfirmModal}"/>
+                    <h2 class="slds-text-heading--medium">CONFIRM</h2>
+                </div>
+                <div class="slds-modal__content slds-p-around--medium">
+                    {!v.confirmMsg}
+                </div>
+                <div class="slds-modal__footer">
+                    <button class="slds-button slds-button--neutral " onclick="{!c.hideConfirmModal}">No</button>
+                    <button class="slds-button slds-button--brand " onclick="{!c.confirmModalYes}">Yes</button>
+                </div>
+            </div>
+        </div>        
+    </div>
+</aura:component>

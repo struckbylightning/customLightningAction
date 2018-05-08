@@ -1,0 +1,27 @@
+<design:component >
+    <design:attribute name="buttonLabel" label="Button Label" />
+    <design:attribute name="showConfirmMsgModal" label="Show Confirm Box?" 
+                      datasource="Always, Conditional, Never, ValidatePriorToRedirecting"
+                      required="true"/>
+    <design:attribute name="showConfirmApexMethodName" 
+                      label="If Conditional/ValidatePriorToRedirecting, Enter the name of the Method in CustomLightningActionApxCtrl.cls to be called"/>
+    
+    <design:attribute name="confirmMsg" label="Enter Confirmation Message"/>
+    
+    <design:attribute name="callApexOrLaunchComponent"
+                      label="Call apex or load component or fire an event"
+                      datasource="Apex, Component, Event"/>
+    
+    <design:attribute name="apexMethodName" 
+                      label="If Apex, Enter the name of the Method in CustomLightningActionApxCtrl.cls to be called"/>
+    
+    <design:attribute name="eventName" 
+                      label="If Event, Enter the name of the Event"/>
+    
+    <design:attribute name="componentName" label="If Component, Enter the Name" />
+    <design:attribute name="componentLoadType" label="Component Load Type" 
+                      datasource="Modal, Redirect" default="Redirect"/>
+    
+    <design:attribute name="recordIdAttribute" label="Record Id Holder Attribute" default="recordId"/>
+    
+</design:component>

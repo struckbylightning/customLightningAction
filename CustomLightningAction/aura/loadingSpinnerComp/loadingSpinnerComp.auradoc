@@ -1,0 +1,5 @@
+<aura:documentation>
+	<aura:description>
+ 		<code>c:LoadingSpinnerComp</code> is a reusable component to show a loading spinner in the component where it's being used.
+    </aura:description>
+</aura:documentation>

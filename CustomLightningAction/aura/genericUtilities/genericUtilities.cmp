@@ -1,0 +1,6 @@
+<aura:component controller="GenericDataSaverApxCtrl" extensible="true">
+    <aura:attribute name="showSpinner" type="Boolean" default="false" description="Boolean flag used in logic to show/hide spinner."/>    
+    <aura:attribute name="error" type="String"/>
+    <c:loadingSpinnerComp spinner="{!v.showSpinner}"/>
+    {!v.body}
+</aura:component>

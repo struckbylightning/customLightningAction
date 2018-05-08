@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CustomLightningAction</fullName>
+    <types>
+        <members>APXFieldValidationError</members>
+        <members>CrudResponseApxCtrl</members>
+        <members>CustomLightningActionApxCtrl</members>
+        <members>GenericDataSaverApxCtrl</members>
+        <members>LightningServerResponse</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>customLightningAction</members>
+        <members>genericUtilities</members>
+        <members>loadingSpinnerComp</members>
+        <members>newSalesOrderWizard</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>Account.Credit_Status__c</members>
+        <name>CustomField</name>
+    </types>
+    <version>41.0</version>
+</Package>

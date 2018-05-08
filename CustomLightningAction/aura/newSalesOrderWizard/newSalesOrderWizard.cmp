@@ -1,0 +1,10 @@
+<aura:component >
+    <lightning:card title="New Sales Order Creation Wizard" iconName="standard:opportunity" footer="Card Footer">
+        <aura:set attribute="actions">
+            <lightning:button label="New"/>
+        </aura:set>
+        <p class="slds-p-horizontal_small">
+            Card Body
+        </p>
+    </lightning:card>
+</aura:component>
